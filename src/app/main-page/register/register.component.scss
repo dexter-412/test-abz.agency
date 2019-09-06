@@ -1,0 +1,198 @@
+#register {
+  padding-top: 150px;
+  padding-bottom: 145px;
+
+  @media (max-width: 1024px) {
+      padding-top: 147px;
+      padding-bottom: 134px;
+  }
+
+  @media (max-width: 768px) {
+    padding-top: 132px;
+    padding-bottom: 117px;
+  }
+
+  .container{
+
+    h2 {
+      margin-bottom: 15px;
+
+      @media (max-width: 768px) {
+        margin-bottom: 20px;
+      }
+    }
+
+    h5 {
+
+      @media (max-width: 768px) {
+          padding: 0 160px;
+      }
+      @media (max-width: 320px) {
+          padding: 0 0px;
+      }
+    }
+
+    .form-wrapper {
+      margin-top: 63px;
+
+      @media (max-width: 768px) {
+        margin-top: 53px;
+      }
+
+      .inner-form-wrapper {
+
+        .top-fields {
+          display: flex;
+          flex-wrap: wrap;
+          margin-bottom: 50px;
+
+          @media (max-width: 768px) {
+            margin-bottom: 20px;
+          }
+
+          @media (max-width: 320px) {
+            display: block;
+          }
+
+          .form-control-wrapper {
+            position: relative;
+            flex: 0 0 33.333333%;
+            max-width: 33.333333%;
+            box-sizing: border-box;
+            padding-right: 18px;
+            padding-bottom: 20px;
+            position: relative;
+
+            @media (max-width: 320px) {
+              width: 100%;
+              max-width: none;
+              padding-right: 0;
+            }
+
+            .error-text {
+              font-size: 12px;
+              color: #F55043;
+              position: absolute;
+              bottom: 0;
+              left: 20px;
+              font-family: var(--font-source-sans-pro-reg);
+            }
+
+            &.has-error {
+
+              .form-control {
+                border-color: #F55043;
+              }
+
+              label {
+                color: #F55043;
+              }
+            }
+
+            &:last-child {
+              padding: 0;
+            }
+
+            .form-control {
+              padding: 17px 22px;
+              width: 100%;
+              box-sizing: border-box;
+              color: #b7b7b7;
+              border: 1px solid #b7b7b7;
+              border-radius: 3px;
+              font-size: 16px;
+              font-family: var(--font-source-sans-pro-reg);
+              outline: none;
+              box-sizing: border-box;
+
+              &:focus {
+                border: 2px solid #b7b7b7;
+              }
+
+              &::placeholder {
+                color: #b7b7b7;
+                font-size: 16px;
+                font-family: var(--font-source-sans-pro-reg);
+              }
+            }
+
+            label {
+              color: #b7b7b7;
+              font-size: 12px;
+              font-family: var(--font-source-sans-pro-reg);
+              position: absolute;
+              background: #fff;
+              padding: 0 5px;
+              top: -7px;
+              left: 10px;
+            }
+          }
+        }
+
+        .bottom-fields {
+          display: flex;
+          flex-wrap: wrap;
+
+          @media (max-width: 320px) {
+            display: block;
+          }
+
+          .form-control-wrapper {
+            flex: 0 0 50%;
+            max-width: 50%;
+
+            @media (max-width: 320px) {
+              max-width: 100%;
+              width: 100%;
+            }
+
+            &.select-wrapper {
+
+              .mat-form-field {
+                width: 100%;
+
+                .mat-form-field-wrapper {
+
+
+                .mat-form-field-flex {
+                  border: 1px solid #b7b7b7 !important;
+                  border-radius: 3px;
+                }
+              }
+              }
+            }
+          }
+
+          .file-wrapper {
+            text-align: center;
+
+          }
+        }
+
+        .submit-wrapper {
+          margin-top: 20px;
+
+          @media (max-width: 768px) {
+              margin-top: 52px;
+          }
+        }
+
+        .btn-primary {
+
+          &.disabled {
+            background: #d7d7d7;
+            color: #8d8c8c;
+          }
+        }
+      }
+    }
+  }
+}
+
+// delete background for autofill inputs
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active  {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}

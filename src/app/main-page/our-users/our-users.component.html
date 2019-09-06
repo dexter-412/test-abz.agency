@@ -1,0 +1,23 @@
+<section id="our-users">
+  <div class="container">
+    <h2>Our cheerful users</h2>
+    <h5>Attention! Sorting users by registration date</h5>
+    <div class="users">
+      <div class="user" *ngFor="let user of usersToShow">
+        <div class="img">
+          <img src="{{user.photo}}" alt="">
+        </div>
+        <div class="content">
+          <h4 class="name">{{user.name}}</h4>
+          <p class="par-3 description">{{ user.position }}</p>
+          <p class="par-3 email">{{ user.email }} </p>
+          <p class="par-3 phone">{{ user.phone }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="text-center show-more-wrapper" *ngIf="!showMoreDisabled">
+
+      <button (click)="showMore()" class="btn-secondary">Show more</button>
+    </div>
+  </div>
+</section>

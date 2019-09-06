@@ -1,0 +1,294 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+// import material styles
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+//import fonts
+
+@font-face{
+  font-family: 'overpass-semiBold';
+  src: url("./assets/fonts/overpass/Overpass-SemiBold.ttf")  format('truetype');
+  font-weight: 600;
+}
+
+@font-face{
+  font-family: 'source-sans-pro-reg';
+  src: url("./assets/fonts/souece-sans-pro/SourceSansPro-Regular.ttf")  format('truetype');
+  font-weight: 600;
+}
+
+$fa-font-path: "../node_modules/font-awesome/fonts";
+@import '~font-awesome/scss/font-awesome.scss';
+
+
+// main colors
+
+:root {
+  --primary-color: #ef6c00;
+  --secondary-color: #283593;
+  --background-color: #fff;
+
+  --font-overpass-semibold: overpass-semiBold;
+  --font-source-sans-pro-reg: source-sans-pro-reg;
+}
+
+
+
+//main styles
+
+body {
+  margin: 0;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 0 15px;
+
+  @media (max-width: 1024px) {
+    padding: 0 45px;
+  }
+
+  @media (max-width: 768px) {
+   padding: 0 24px;
+  }
+
+  @media (max-width: 320px) {
+    padding: 0 16px;
+  }
+
+
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-family: var(--font-source-sans-pro-reg);
+}
+
+.p1 {
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.p2 {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.p3 {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+h1 {
+  font-family: var(--font-overpass-semibold);
+  font-size: 50px;
+  line-height: 60px;
+  margin: 0;
+
+  @media (max-width: 768px) {
+    font-size: 42px;
+    line-height: 51px;
+  }
+
+  @media (max-width: 320px) {
+    font-size: 30px;
+    line-height: 31px;
+  }
+}
+
+h2 {
+  font-family: var(--font-overpass-semibold);
+  font-size: 42px;
+  line-height: 51px;
+  margin: 0;
+  text-align: center;
+  color: #000;
+
+  @media (max-width: 320px) {
+    font-size: 26px;
+    line-height: 31px;
+  }
+}
+
+h3 {
+  font-family: var(--font-overpass-semibold);
+  font-size: 26px;
+  line-height: 31px;
+  margin: 0;
+
+  @media (max-width: 320px) {
+    font-size: 22px;
+    line-height: 26px;
+  }
+}
+
+h4 {
+  font-family: var(--font-overpass-semibold);
+  font-size: 22px;
+  line-height: 26px;
+  margin: 0;
+}
+
+h5 {
+  font-family: var(--font-source-sans-pro-reg);
+  font-size: 18px;
+  line-height: 21px;
+  margin: 0;
+  text-align: center;
+
+  @media (max-width: 320px) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+
+.par-1, .par-2, .par-3 {
+  font-family: var(--font-source-sans-pro-reg);
+  margin: 0;
+}
+
+.par-1 {
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.par-2 {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.par-3 {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: var(--primary-color);
+  border-radius: 3px;
+  font-size: 20px;
+  font-family: var(--font-overpass-semibold);
+  font-weight: bold;
+  color: #fff;
+  padding: 10px 112px;
+  text-align: center;
+  cursor: pointer;
+  transition: background .2s;
+  border: none;
+
+  &:hover {
+    background: #FC831F;
+  }
+}
+
+.btn-secondary {
+  display: inline-block;
+  background: transparent;
+  border: 2px solid var(--primary-color);
+  border-radius: 3px;
+  font-size: 20px;
+  font-family: var(--font-overpass-semibold);
+  font-weight: bold;
+  color: var(--primary-color);
+  padding: 6px 90px;
+  text-align: center;
+  cursor: pointer;
+  transition: background .2s;
+  line-height: 28px;
+
+  &:hover {
+    background: #FEE6D2;
+  }
+}
+
+.btn-disabled {
+  display: inline-block;
+  background: #D7D7D7;
+  border-radius: 3px;
+  font-size: 20px;
+  font-family: var(--font-overpass-semibold);
+  font-weight: bold;
+  color: #8D8C8C;
+  padding: 6px 90px;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-link {
+  font-family: var(--font-overpass-semibold);
+  color: var(--primary-color);
+  font-size: 22px;
+  display: inline-block;
+  transition: color .2s;
+
+  &:hover {
+    color: #FC831F;
+  }
+}
+
+.bottom-links {
+  li {
+
+    a{
+      font-family: var(--font-source-sans-pro-reg);
+      font-size: 16px;
+      color: #fff;
+      transition: color .2s;
+
+      &:hover {
+        color: var(--primary-color);
+      }
+    }
+  }
+}
+
+.hide-on-med {
+     @media (max-width: 768px) {
+       display: none !important;
+    }
+}
+
+.hide-on-lar {
+  @media (min-width: 769px) {
+    display: none !important;
+  }
+}
+
+.hide-on-mob {
+  @media (max-width: 320px) {
+    display: none !important;
+  }
+}
+
+.show-on-mob {
+  @media (min-width: 321px) {
+    display: none !important;
+  }
+}
+
+.display-on-mob {
+  display: block !important;
+}

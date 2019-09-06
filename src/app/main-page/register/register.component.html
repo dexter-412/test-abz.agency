@@ -1,0 +1,63 @@
+<section id="register">
+  <div class="container">
+    <h2>Register to get a work</h2>
+    <h5>Attention! After successful registration and alert, update the list of users in the block from the top</h5>
+
+    <div class="form-wrapper">
+      <form action="" id="register-form" [formGroup]="registrForm" (ngSubmit)="onSubmit()" >
+        <div class="inner-form-wrapper">
+
+          <div class="top-fields">
+            <div class="name-wrapper form-control-wrapper" [ngClass]="{'has-error': registrForm.get('name').invalid && registrForm.get('name').touched}" >
+              <input type="text" id="name" placeholder="Your name" formControlName="name" class="form-control">
+              <label for="name">Name</label>
+              <div class="error-text" *ngIf="registrForm.get('name').invalid && registrForm.get('name').touched">Field is required</div>
+            </div>
+            <div class="email-wrapper form-control-wrapper" [ngClass]="{'has-error': registrForm.get('email').invalid && registrForm.get('email').touched}">
+              <input type="email" id="email" placeholder="Your email" formControlName="email" class="form-control">
+              <label for="name">Email</label>
+              <div class="error-text" *ngIf="registrForm.get('email').invalid && registrForm.get('email').touched">
+                <span *ngIf="registrForm.get('email').errors['required'] && registrForm.get('email').errors['hasError']">Field is required</span>
+                <span *ngIf="!registrForm.get('email').errors['required'] && registrForm.get('email').errors['hasError']">Wrong format</span>
+              </div>
+            </div>
+            <div class="phone-wrapper form-control-wrapper" [ngClass]="{'has-error': registrForm.get('phone').invalid && registrForm.get('phone').touched}">
+              <input type="text" id="phone" formControlName="phone" class="form-control" [dropSpecialCharacters]="false" [specialCharacters]="[ '+' ,'(', ')' , '-', ' ' , '\\' ]"  [showMaskTyped] = "true" prefix="+38 ("  mask="000) 000 00 00">
+              <label for="name">Phone</label>
+              <div class="error-text" *ngIf="registrForm.get('phone').invalid && registrForm.get('phone').touched">
+                <span *ngIf="registrForm.get('phone').errors['required'] && registrForm.get('phone').errors['hasError']">Field is required</span>
+                <span *ngIf="!registrForm.get('phone').errors['required'] && registrForm.get('phone').errors['hasError']">Wrong format</span>
+              </div>
+            </div>
+          </div>
+          <div class="bottom-fields">
+            <div class="select-wrapper form-control-wrapper">
+              <mat-form-field>
+              <mat-label>Select your position</mat-label>
+              <mat-select  formControlName="position_id">
+                <mat-option *ngFor="let position of positions" [value]="position.id">
+                  {{ position.name }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+            </div>
+
+            <div class="file-wrapper form-control-wrapper">
+
+              <input type="file" formControlName="photo" id="filePhoto">
+            </div>
+
+
+
+          </div>
+          <div class="text-center submit-wrapper">
+            <input type="submit" [disabled]="registrForm.invalid" class="btn-primary" [ngClass]="{'disabled': registrForm.invalid}"  value="Sign Up">
+          </div>
+
+
+        </div>
+      </form>
+    </div>
+
+  </div>
+</section>

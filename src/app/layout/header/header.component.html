@@ -1,0 +1,39 @@
+<header>
+  <div class="container">
+    <div class="top-wrapper">
+      <div class="logo">
+        <img src="assets/images/logo.svg" alt="abz.agency" class="logo-img">
+      </div>
+      <div class="top-menu hide-on-med">
+        <ul>
+          <li><a >About me</a></li>
+          <li><a href="">Relationships</a></li>
+          <li><a href="">Requirements</a></li>
+          <li><a href="">Users</a></li>
+          <li><a href="">Sign Up</a></li>
+        </ul>
+      </div>
+      <div class="">
+        <div class="hide-on-med authorized-user">
+          <div class="user-info">
+            <div class="name">{{ user.name }}</div>
+            <div class="email"> {{ user.email }} </div>
+          </div>
+          <div class="user-photo">
+            <img src="{{ user.photo }}" alt="user-photo">
+          </div>
+          <div class="user-to-out">
+            <a href="">
+              <i class="fa fa-sign-out" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+        <div class="hide-on-lar">
+          <button>
+            <i class="fa fa-bars" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
